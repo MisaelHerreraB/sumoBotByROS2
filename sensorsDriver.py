@@ -13,8 +13,8 @@ board.set_pin_mode_analog_input(4, callback=None, differential=1)
 board.set_pin_mode_analog_input(5, callback=None, differential=1)
 
 rclpy.init()
-node = rclpy.create_node('enemyFinder')
-pub = node.create_publisher(String, 'enemyLocation',10)
+node = rclpy.create_node('sensorsDriver')
+pub = node.create_publisher(String, 'sensors',10)
 msg = String()
 
 while rclpy.ok():

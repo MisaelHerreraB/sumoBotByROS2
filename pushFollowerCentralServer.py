@@ -5,8 +5,6 @@ from std_msgs.msg import String
 def cb(msg):
    aux = msg.data
    val = f'izF'   
-   print(f'Publishing:"{aux}"')
-   print(f'Publishing:"{aux[3]}"')
    if aux[0]=="0" and aux[1]=="1" and aux[2]=="1" and aux[3]=="0":
       val = f'adelante'
    if aux[0]=="0" and aux[1]=="0" and aux[2]=="0" and aux[3]=="0":

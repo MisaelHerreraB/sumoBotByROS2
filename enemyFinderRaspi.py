@@ -24,12 +24,12 @@ while rclpy.ok():
    value4=0
    value5=0
    value6=0
-   v1 = board.analog_read(0)
-   v2 = board.analog_read(1)
-   v3 = board.analog_read(2)
-   v4 = board.analog_read(3)
-   v5 = board.analog_read(4)
-   v6 = board.analog_read(5)
+   v1 = board.analog_read(0)[0]
+   v2 = board.analog_read(1)[0]
+   v3 = board.analog_read(2)[0]
+   v4 = board.analog_read(3)[0]
+   v5 = board.analog_read(4)[0]
+   v6 = board.analog_read(5)[0]
    value1= lambda v1: 1 if v1 >= 300 else 0
    value2= lambda v2: 1 if v2 >= 300 else 0
    value3= lambda v3: 1 if v3 >= 300 else 0

@@ -4,7 +4,7 @@ from std_msgs.msg import String
 from pymata4 import pymata4
 
 board = pymata4.Pymata4()
-board.set_sampling_interval(100)
+board.set_sampling_interval(200)
 board.set_pin_mode_analog_input(0, callback=None, differential=1)
 board.set_pin_mode_analog_input(1, callback=None, differential=1)
 board.set_pin_mode_analog_input(2, callback=None, differential=1)

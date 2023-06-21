@@ -30,13 +30,31 @@ while rclpy.ok():
    v4 = board.analog_read(3)[0]
    v5 = board.analog_read(4)[0]
    v6 = board.analog_read(5)[0]
-   value1= lambda v1: 1 if v1 >= 300 else 0
-   value2= lambda v2: 1 if v2 >= 300 else 0
-   value3= lambda v3: 1 if v3 >= 300 else 0
-   value4= lambda v4: 1 if v4 >= 300 else 0
-   value5= lambda v5: 1 if v5 >= 500 else 0
-   value6= lambda v6: 1 if v6 >= 500 else 0   
-   msg.data = f'{value1}{value2}{value3}{value4}{value5}{value6}'
+   if (v1 >= 300):
+      value1=1
+   else:
+      value1=0
+   if (v2 >= 300):
+      value2=1
+   else:
+      value2=0
+   if (v3 >= 500):
+      value3=1
+   else:
+      value3=0
+   if (v4 >= 500):
+      value4=1
+   else:
+      value4=0
+   if (v5 >= 300):
+      value5=1
+   else:
+      value5=0
+   if (v6 >= 300):
+      value6=1
+   else:
+      value6=0 
+   msg.data = f'{value6}{value2}{value1}{value5}-{value4}{value3}'
    print(f'Publishing:"{msg.data}"')
    pub.publish(msg)
 

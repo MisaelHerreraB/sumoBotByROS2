@@ -6,7 +6,7 @@ def cb(msg):
 
 rclpy.init()
 node = rclpy.create_node('motorDriver')
-sub = node.create_subscription(String, 'enemyLocation',cb,10)
+sub = node.create_subscription(String, 'motion',cb,10)
 rclpy.spin(node)
 
 

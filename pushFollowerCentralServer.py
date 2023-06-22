@@ -7,17 +7,18 @@ def cb(msg):
    val = f'izF'   
    if aux[0]=="0" and aux[1]=="1" and aux[2]=="1" and aux[3]=="0":
       val = f'adelante'
-   if aux[0]=="0" and aux[1]=="0" and aux[2]=="0" and aux[3]=="0":
+   elif aux[0]=="0" and aux[1]=="0" and aux[2]=="0" and aux[3]=="0":
       val = f'izF'
-   
-   if aux[0]=="0" and aux[1]=="0" and aux[2]=="0" and aux[3]=="1":
+   elif aux[0]=="0" and aux[1]=="0" and aux[2]=="0" and aux[3]=="1":
       val = f'deF'
-   if aux[0]=="1" and aux[1]=="0" and aux[2]=="0" and aux[3]=="0":
+   elif aux[0]=="1" and aux[1]=="0" and aux[2]=="0" and aux[3]=="0":
       val = f'izF'
-   if aux[0]=="0" and aux[1]=="0" and aux[2]=="1" and aux[3]=="0":
+   elif aux[0]=="0" and aux[1]=="0" and aux[2]=="1" and aux[3]=="0":
       val = f'deS'
-   if aux[0]=="0" and aux[1]=="1" and aux[2]=="0" and aux[3]=="0":
+   elif aux[0]=="0" and aux[1]=="1" and aux[2]=="0" and aux[3]=="0":
       val = f'izS'
+   else:
+      val = f'stop'
    
    if aux[6]=="1" or aux[5]=="1":
       val = f'back'

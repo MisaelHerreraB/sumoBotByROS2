@@ -46,20 +46,28 @@ def deS():
    GPIO.output(7, GPIO.LOW)
    GPIO.output(8, GPIO.LOW)
 
+def stop():
+   GPIO.output(3, GPIO.LOW)
+   GPIO.output(5, GPIO.LOW)
+   GPIO.output(7, GPIO.LOW)
+   GPIO.output(8, GPIO.LOW)
+
 def cb(msg):
    if msg.data=="adelante":
       adelante()
-   if msg.data=="back":
+   elif msg.data=="back":
       back()
       time.sleep(1.2)
-   if msg.data=="izS":
+   elif msg.data=="izS":
       izS()
-   if msg.data=="izF":
+   elif msg.data=="izF":
       izF()
-   if msg.data=="deF":
+   elif msg.data=="deF":
       deF()
-   if msg.data=="deS":
+   elif msg.data=="deS":
       deS()
+   elif msg.data=="stop":
+      stop()
    print(f'I heard:"{msg.data}"')
 
 rclpy.init()
